@@ -1,0 +1,34 @@
+http://localhost/uiframeworks/angular/src/client/index.html
+
+Task List
+=========
+- view list of tasks
+- create new task
+- mark task as completed
+
+- user can log in
+- view only their tasks
+
+- show a dashboard containing news? weather? some data that we can create as an Angular Directive
+- user profile showing stats of completed tasks or something?
+
+Folder Structure
+src
+  client
+    app
+      feature1
+        featureview.html
+        feature.js
+      common ?
+      core ?
+      data ?
+      layout ?
+      app.js
+      index.html
+    content
+    scripts
+  server
+    ???
+
+
+

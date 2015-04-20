@@ -1,0 +1,18 @@
+<div class="navbar navbar-default" data-ng-controller="Shell as vm">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="#/tasks">Task List</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-form navbar-right">
+			<div class="form-group" data-ng-show="vm.isLoggedIn">
+				<label class="form-control">Welcome {{ vm.username }}</label>
+			</div>
+		</ul>
+	</div>
+</div>
+
+<div class="container" data-ng-view>
+	
+</div>

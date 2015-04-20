@@ -1,0 +1,33 @@
+<h1>Tasks</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="input-group input-group-lg" data-ng-repeat="task in vm.tasks">
+				<span class="input-group-addon">
+					<input type="checkbox" data-ng-model="task.isComplete"/>
+				</span>
+				<label class="form-control">{{task.description}}</label>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<form class="form-horizontal">
+				<fieldset>
+					<legend>Create Task</legend>
+					<div class="form-group">
+						<div class="col-lg-10">
+							<input id=txtTask" type="text" class="form-control" placeholder="New Task" data-ng-model="vm.newTask" />
+						</div>
+					</div>
+					<div class="form-group">
+					  <div class="col-lg-10 ">
+						<button type="button" class="btn btn-primary" data-ng-click="vm.createTask()">Create</button>
+					  </div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+	
+
