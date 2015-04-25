@@ -9,7 +9,8 @@
     function authenticationservice(sessionservice) {
         var service = {
             isValid: isValid,
-			signInUser: signInUser
+			signInUser: signInUser,
+			signOutUser: signOutUser
         };
 
         return service;
@@ -25,6 +26,12 @@
 			sessionservice.currentUser.email = email;
 			sessionservice.currentUser.token = "tbd";
 			sessionservice.currentUser.isLoggedIn = true;
+		}
+
+		function signOutUser() {
+			sessionservice.currentUser.email = "";
+			sessionservice.currentUser.token = null;
+			sessionservice.currentUser.isLoggedIn = false;
 		}
 
     }

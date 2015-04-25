@@ -16,22 +16,12 @@
         return service;
 
         function getTasks(username) {
-        	console.log("Getting tasks for: " + username);
         	var userTasks = getTasksByUser(username);
-   //      	if (userTasks.length == 0) {
-
-   //      	}
-
-			// if (tasks.length == 0) {
-			// 	tasks = getDefaultTasks();
-			// } 
 
 			return $q.when(userTasks);
         }
 		
 		function createTask(username, description) {
-			console.log("Creating tasks for: " + username);
-			console.log("Count: " + tasks.length);
 			var userTasks = getTasksByUser(username);
 		    var newId = userTasks[userTasks.length-1].id + 1;
 			userTasks.push({id: newId, description: description, isComplete: false});
@@ -62,17 +52,6 @@
 				{id: 3, description: 'Dominate the day', isComplete: false}
 			]
 		}
-
-		// function foo() {
-		// 	var tasks = [
-		// 		{username: "cartman", tasks = [{id: 1, name="name"}
-		// 									   {id: 2, name="last"}]},
-		// 		{username: "marsh", tasks = [{id: 1, name="name"}
-		// 									   {id: 2, name="last"}]}
-
-		// 	]
-
-		// }
 
     }
 })();
