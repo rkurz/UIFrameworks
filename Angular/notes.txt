@@ -2,12 +2,7 @@ http://localhost/uiframeworks/angular/src/client/index.html
 
 Task List
 =========
-- view list of tasks
-- create new task
-- mark task as completed
-
-- user can log in
-- view only their tasks
+- logout
 
 - show a dashboard containing news? weather? some data that we can create as an Angular Directive
 - user profile showing stats of completed tasks or something?
@@ -31,4 +26,4 @@ src
     ???
 
 
-
+I c

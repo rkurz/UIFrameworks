@@ -5,8 +5,8 @@
         .module('app.tasks')
         .controller('Tasks', Tasks);
 
-    Tasks.$inject = ['dataservice'];
-    function Tasks(dataservice) {
+    Tasks.$inject = ['dataservice', 'sessionservice'];
+    function Tasks(dataservice, sessionservice) {
         var vm = this;
         vm.tasks = [];
 		vm.createTask = createTask;
@@ -20,14 +20,16 @@
         }
 
         function getTasks() {
-            return dataservice.getTasks().then(function(data) {
+            var username = sessionservice.currentUser.email;
+            return dataservice.getTasks(username).then(function(data) {
                 vm.tasks = data;
                 return vm.tasks;
             });
         }
 		
 		function createTask() {
-			dataservice.createTask(this.newTask);
+            var username = sessionservice.currentUser.email;
+			dataservice.createTask(username, this.newTask);
 		}
     }
 })();
