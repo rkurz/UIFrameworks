@@ -9,6 +9,7 @@
     function Tasks(dataservice, sessionservice) {
         var vm = this;
         vm.tasks = [];
+        vm.newTask = '';
 		vm.createTask = createTask;
 
         activate();
@@ -29,7 +30,8 @@
 		
 		function createTask() {
             var username = sessionservice.currentUser.email;
-			dataservice.createTask(username, this.newTask);
+			dataservice.createTask(username, vm.newTask);
+            vm.newTask = '';
 		}
     }
 })();
