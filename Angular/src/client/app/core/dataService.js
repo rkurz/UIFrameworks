@@ -21,18 +21,16 @@
 			return $q.when(userTasks);
         }
 		
-		function createTask(username, description) {
+		function createTask(username, description, dueOn) {
 			var userTasks = getTasksByUser(username);
 		    var newId = userTasks[userTasks.length-1].id + 1;
-			userTasks.push({id: newId, description: description, isComplete: false});
+			userTasks.push({id: newId, description: description, dueOn: dueOn, isComplete: false});
 		}
 		
 		function completeTask(username, id) {
 			var userTasks = getTasksByUser(username);
 			userTasks.filter(function(t) { return t.id == id })[0].isComplete = true;
 		}
-
-		
 
 		function getTasksByUser(username) {
 			var result = tasks.filter(function(t) { return t.username == username });
@@ -47,9 +45,9 @@
 
 		function getDefaultTasks() {
 			return [
-				{id: 1, description: 'Eat breakfast', isComplete: false},
-				{id: 2, description: 'Take a shower', isComplete: false},
-				{id: 3, description: 'Dominate the day', isComplete: false}
+				{id: 1, description: 'Eat breakfast', dueOn: new Date(), isComplete: false},
+				{id: 2, description: 'Take a shower', dueOn: new Date(), isComplete: false},
+				{id: 3, description: 'Dominate the day', dueOn: new Date(), isComplete: false}
 			]
 		}
 

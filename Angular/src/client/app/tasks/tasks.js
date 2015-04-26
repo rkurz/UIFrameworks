@@ -10,7 +10,21 @@
         var vm = this;
         vm.tasks = [];
         vm.newTask = '';
+        vm.dueOn = null;
 		vm.createTask = createTask;
+        //date picker stuff
+        vm.datepicker = {};
+        vm.datepicker.isOpen = false;
+        vm.datepicker.open = function($event) {
+                                console.log("FUCK");
+                                $event.preventDefault();
+                                $event.stopPropagation();
+
+                                vm.datepicker.isOpen = true;
+                              };
+
+
+
 
         activate();
 
@@ -30,8 +44,9 @@
 		
 		function createTask() {
             var username = sessionservice.currentUser.email;
-			dataservice.createTask(username, vm.newTask);
+			dataservice.createTask(username, vm.newTask, vm.dueOn);
             vm.newTask = '';
+            vm.dueOn = null;
 		}
     }
 })();

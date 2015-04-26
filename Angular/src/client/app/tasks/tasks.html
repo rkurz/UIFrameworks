@@ -12,11 +12,21 @@
 		<div class="col-md-6">
 			<form class="form-horizontal">
 				<fieldset>
-					<legend>Create Task</legend>
+					<legend>New Task</legend>
 					<div class="form-group">
-						<div class="col-lg-10">
-							<input id=txtTask" type="text" class="form-control" placeholder="New Task" data-ng-model="vm.newTask" />
+						<label for="txtTask" class="col-lg-2 control-label">Task</label>
+						<div class="col-lg-9">
+							<input id="txtTask" type="text" class="form-control" data-ng-model="vm.newTask" />
 						</div>
+					</div>
+					<div class="form-group">
+						<label for="dueOn" class="col-lg-2 control-label">Due Date</label>
+						<div class="col-lg-9">
+							<input id="dueOn" type="text" class="form-control" datepicker-popup="dd-MMMM-yyyy" data-ng-model="vm.dueOn" is-open="vm.datepicker.isOpen" close-text="Close" />
+						</div>
+						<span class="input-group-btn">
+			            	<button type="button" class="btn btn-default" data-ng-click="vm.datepicker.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+		              	</span>
 					</div>
 					<div class="form-group">
 					  <div class="col-lg-10 ">

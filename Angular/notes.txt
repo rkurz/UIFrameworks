@@ -1,8 +1,10 @@
 http://localhost/uiframeworks/angular/src/client/index.html
+http://angular-ui.github.io/
 
 Task List
 =========
-- logout
+- date entry (angularui or angularbootstrap?)
+- grid (ng grid)
 
 - show a dashboard containing news? weather? some data that we can create as an Angular Directive
 - user profile showing stats of completed tasks or something?
