@@ -2,6 +2,6 @@
     'use strict';
 
     angular.module('app.core', [
-        'ngAnimate', 'ngRoute', 'ngSanitize', 'ui.bootstrap'
+        'ngAnimate', 'ngRoute', 'ngSanitize', 'ui.bootstrap', 'ui.grid'
     ]);
 })();

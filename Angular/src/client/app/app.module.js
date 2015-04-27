@@ -5,7 +5,8 @@
         'app.core',
 		"app.layout",
 		"app.login",
-        'app.tasks'
+        'app.tasks',
+        'app.reports'
     ]);
 
 })();

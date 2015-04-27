@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <link href="content/bootstrap.css" rel="stylesheet" />
+    <link href="content/ui-grid-unstable.css" rel="stylesheet" />
 </head>
 <body>
 	<div data-ng-include="'app/layout/shell.html'"></div>
@@ -15,7 +16,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/ui-bootstrap-tpls-0.12.1.js"></script>
-	
+	<script src="scripts/ui-grid-unstable.js"></script>
+
 	<script src="app/app.module.js"></script>
 	
 	<!-- core module -->
@@ -39,5 +41,10 @@
     <script src="app/tasks/tasks.module.js"></script>
     <script src="app/tasks/config.route.js"></script>
     <script src="app/tasks/tasks.js"></script>
+
+    <!-- reports module -->
+    <script src="app/reports/reports.module.js"></script>
+    <script src="app/reports/config.route.js"></script>
+    <script src="app/reports/taskSummaryByUser.js"></script>
 </body>
 </html>

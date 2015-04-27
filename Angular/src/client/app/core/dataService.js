@@ -10,7 +10,8 @@
 		var tasks = [];
         var service = {
             getTasks: getTasks,
-			createTask: createTask
+			createTask: createTask,
+			getTaskSummaryByUser: getTaskSummaryByUser
         };
 
         return service;
@@ -48,7 +49,21 @@
 				{id: 1, description: 'Eat breakfast', dueOn: new Date(), isComplete: false},
 				{id: 2, description: 'Take a shower', dueOn: new Date(), isComplete: false},
 				{id: 3, description: 'Dominate the day', dueOn: new Date(), isComplete: false}
-			]
+			];
+		}
+
+		//Fake data for the sample task summary report.
+		function getTaskSummaryByUser(){
+			var report = [
+							{name: "Eric Cartman", overdueTaskCount: 5, incompleteTaskCount: 5, completeTaskCount: 0},
+							{name: "Stan Marsh", overdueTaskCount: 0, incompleteTaskCount: 3, completeTaskCount: 4},
+							{name: "Kyle Broflovski", overdueTaskCount: 2, incompleteTaskCount: 3, completeTaskCount: 1},
+							{name: "Kenny McCormick", overdueTaskCount: 0, incompleteTaskCount: 0, completeTaskCount: 0},
+							{name: "Butters Stotch", overdueTaskCount: 0, incompleteTaskCount: 0, completeTaskCount: 10},
+							{name: "Randy Marsh", overdueTaskCount: 1, incompleteTaskCount: 1, completeTaskCount: 1},
+							{name: "Jimmy Valmer", overdueTaskCount: 0, incompleteTaskCount: 0, completeTaskCount: 0}
+						];
+			return $q.when(report);
 		}
 
     }

@@ -3,8 +3,8 @@ http://angular-ui.github.io/
 
 Task List
 =========
-- date entry (angularui or angularbootstrap?)
 - grid (ng grid)
+- sample report to show users and various task counts (overdue, incomplete, completed)
 
 - show a dashboard containing news? weather? some data that we can create as an Angular Directive
 - user profile showing stats of completed tasks or something?
